@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#build html file that includes todays date
+#overwrite default nginx html file on debian ec2
+#reload nginx after updating 
+source ./env
+
+
+TODAYS_DATE="$(date +%d/%m/%Y)"
+
+ssh -i "$SSH_KEY_PATH" "$REMOTE_USER@$REMOTE_IP" "sudo tee /var/www/html/index.html >/dev/null" <<HTML
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Hello World</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <p>Today's date is: $TODAYS_DATE</p>
+</body>
+</html>
+HTML
+
+ssh -i "$SSH_KEY_PATH" "$REMOTE_USER@$REMOTE_IP" "sudo systemctl reload nginx"
+
+
