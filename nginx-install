@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+source ./env
+
+ssh -i "$SSH_KEY_PATH" "$REMOTE_USER@$REMOTE_IP" "bash -s" <<'EOF'  # this connects to the vm
+sudo apt-get update -y                      # This updates the current system.
+sudo apt-get install -y nginx            # This will install the nginx system.
+sudo systemctl start nginx           # This will start nginx when installed.
+sudo systemctl enable nginx           # This will make sure it starts on boot.
+EOF
