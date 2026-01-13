@@ -10,5 +10,5 @@ Allison Chen, Jean Venter and Joanne Xie
 - -C "wkone" comment 
 
 ## Part 3
-![ip address]("C:\Users\xieji\4640-lab-wk2\ip.png")
-![html document]("C:\Users\xieji\4640-lab-wk2\html.png")
+![ip address](4640-lab-wk2\ip.png)
+![html document](4640-lab-wk2\html.png)
