@@ -9,4 +9,6 @@ Allison Chen, Jean Venter and Joanne Xie
 - -f ~/.ssh/wkone output file
 - -C "wkone" comment 
 
-
+## Part 3
+![ip address](ip.png)
+![html document](html.png)
