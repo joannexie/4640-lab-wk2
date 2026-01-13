@@ -1,0 +1,5 @@
+# environment variables
+export REMOTE_USER="admin"
+export REMOTE_IP="44.248.150.206"
+export SSH_KEY_PATH="~/.ssh/wkone"
+
